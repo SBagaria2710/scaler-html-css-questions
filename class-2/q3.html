@@ -1,48 +1,65 @@
 <!-- Problem Description:
-Create a basic HTML webpage that displays 2 list. One ordered, one unordered.
-Ordered List should contain a list of 5 cities from around the world. Use alphabets numbers for list-item marker.
-Unordered List should contain a list of 3 beverages. Use square for list-item marker. -->
+Create a basic input form to for user registration. The page should have the HTML input elements to capture the details of the 
+user such as textfield for name, radio button with two options: Male and Female for gender, dropdown for country with two options India or others,
+a textbox for any additional message and a checkbox to Subscribe. Also provide a button to Submit this information.
+-->
 
 <!-- Hints:
-Use the <ol> tag to create ordered list wrapper.
-Use the <ul> tag to create unordered list wrapper.
-Use the <li> tag to mention each item.
-Use type attribute to change the list-item marker.
--->
+Create a input field for name by using the tag <input type = "text" name="name"/>
+Create a radio button for gender field using the tag <input type = "radio">
+Create a dropdown using the <Select> tag and provide options using the <Option> tag
+Create a text area fields using the <textarea> tag
+Create a checkbox using the tag <input type="checkbox">
+Create a button using the tag <input type="submit">
+Provide a label for each field by using the tag <label for="name"></label>
+ -->
 
 <!-- Solution Approach:
 Start by creating the basic structure of the HTML document using the <html>, <head>, and <body> tags.
-Add ordered list using <ol> tag, and further add list items using <li> tag. Use "type" attribute set to "a" or "A" to change the list-item marker.
-Add unordered list using <ul> tag, and further add list items using <li> tag. Use "type" attribute set to "square" to change the list-item marker. -->
+For a form, all the elements must be within the <form> tag
+Create a label for each field using the <label> tag
+Create the iput fields after creating the label using <input> tags
+ -->
 
 <!-- Test Cases:
-Verify that the webpage has ordered list defined with <ol> tag.
-Verify that the <ol> tag has type attribute set to "a" or "A"
-Verify that the <ol> tag has 5 items defined using <li> tag.
-Verify that the webpage has unordered list defined with <ul> tag.
-Verify that the <ul> tag has type attribute set to "square"
-Verify that the <ul> tag has 3 items defined using <li> tag.
-Verify that the webpage has a proper structure using the <html>, <head>, and <body> tags.
--->
+Verify whether all HTML input elements are within the <form> tag
+Verify whether all input fields have a name and id attribute.
+Verify whether all label elements have a for attribute.
+Verify whether all HTML tags have a subsequent closing tag.
+Verify whether all select options have a value attribute.
+Verify wheteer all radio input types have a value attribute 
+ -->
 
 <!-- Complete Solution -->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
   <body>
-    <!-- "type" attribute could also have value "A" here -->
-    <ol type="a">
-      <li>City 1</li>
-      <li>City 2</li>
-      <li>City 3</li>
-      <li>City 4</li>
-      <li>City 5</li>
-    </ol>
-    <ul type="square">
-      <li>Coffee</li>
-      <li>Tea</li>
-      <li>Milk</li>
-    </ul>
-    
-  </body>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" name="name"><br><br>
+      <label for="gender">Gender:</label>
+      <input type="radio" name="gender" id="male" value="male">
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="female" value="female">
+      <label for="female">Female</label> <br><br>
+      <label for="country">Country: </label>
+      <select name="country" id="country">
+          <option>Select an option</option>
+          <option value="india">India</option>
+          <option value="other">Other</option>
+      </select><br><br>
+      <label for="message">Message:</label><br>
+      <textarea name="message" id="message" cols="30" rows="4"></textarea><br><br>
+      <input type="checkbox" name="newsletter" id="newsletter">
+      <label for="newsletter">Subscribe?</label><br><br>
+      <input type="submit" value="Submit">
+  </form>
 </html>
+
