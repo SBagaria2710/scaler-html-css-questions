@@ -1,0 +1,60 @@
+<!-- Problem Description:
+Create a basic HTML webpage that displays a table like we have mentioned below:
+-->
+
+<!-- Hints:
+Use a <table> tag to create a table. We can set attribute to 'border' if we want borders in our table.
+Use <tr> to define rows
+Use <th> for table heading data
+Use <td> for table data. We can use 'rowspan' and 'colspan' attribute to specify the number of rows a cell should span.
+-->
+
+<!-- Solution Approach:
+Define a table tag to create a table. Add border attribute to add border.
+Define rows with tr, heading with th and data item with td.
+For a data to sopan across rows or columns, use rowspan and colspan.
+-->
+
+<!-- Test Cases:
+Verify Table is created.
+Verify first row items use th and not td
+Verify Other rows use use td
+Verify rowspan and colspan accordingly
+Verify that the webpage has a proper structure using the <html>, <head>, and <body> tags.
+-->
+
+<!-- Complete Solution -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <table border>
+      <tr>
+        <th>Name</th>
+        <th>Tech</th>
+        <th>Rating</th>
+      </tr>
+      <tr>
+        <td rowspan = "2">Vikhyat</td>
+        <td>HTML</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+        <td>1</td>
+      </tr>
+          <tr>
+        <td rowspan = "2">Ayush</td>
+        <td>HTML</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td colspan="3">Total: 12</td>
+      </tr>
+    </table>
+  </body>
+</html>

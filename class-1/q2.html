@@ -1,0 +1,53 @@
+<!-- Problem Description:
+Create a basic HTML website for scaler. Page should have an image on the top
+for Scaler logo (link mentioned below), heading that reads "Scaler Academy", one sentence
+description about scaler, and finally a link with text "Go to website" and which points to scaler's website on a new tab.
+Also, image alternate text should be "scaler academy logo", width and height of the image be 100px
+
+Link to Image: https://s3-ap-southeast-1.amazonaws.com/ghost-production-blog/2021/05/74797539_118431542933200_2322441253926469632_o.png
+-->
+
+<!-- Hints:
+Add an image to your website using <img /> tag.
+Link the image to load through 'src' attribute, alternate text using 'alt' attribute, width and height of the image through 'width' and 'height' attribute.
+For heading use <h1> tag.
+For one line description use <p> tag.
+For link, use anchor tag (<a></a>) with href pointing to scaler's website.
+To open the link on a new tab, add an attribute "target=_blank" to anchor tag
+ -->
+
+<!-- Solution Approach:
+Start by creating the basic structure of the HTML document using the <html>, <head>, and <body> tags.
+Use 'src' attribute on <img> tag to add the image to your webpage. Use the link mentioned in the question.
+Use 'alt' attribute on <img> to add alternate text to your image, in case bowser fails to load your image due to some reason.
+Use 'width' and 'height' on <img> to set "100px" width and height to your image.
+For heading use <h1> and provide the text mentioned "Scaler Academy".
+Use anchor tag to link to the scaler website, indicate destination using 'href' attribute and furthermore use 'target' attribute with the value '_blank'.
+ -->
+
+<!-- Test Cases:
+Verify that the webpage has an <img> tag with src and alt attribute on the image with values mentioned on the question.
+Verify 'width' and 'height' attribute on image to be set to '100px'.
+Verify <h1> tag is used with the text mentioned in the question.
+Verify <p> tag is used.
+Verify <a> tag is used with 'target' attribute set to '_blank'
+Verify that the webpage has a proper structure using the <html>, <head>, and <body> tags.
+ -->
+
+<!-- Complete Solution -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img width="100px" height="100px" src="https://s3-ap-southeast-1.amazonaws.com/ghost-production-blog/2021/05/74797539_118431542933200_2322441253926469632_o.png" alt="scaler academy logo" />
+    <h1>Scaler Academy</h1>
+    <p>This is scaler academy</p>
+    <a href="https://www.scaler.com" target="_blank">Go to website</a>
+  </body>
+</html>

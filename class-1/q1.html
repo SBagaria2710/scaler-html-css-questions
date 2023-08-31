@@ -1,0 +1,33 @@
+<!-- Problem Description:
+Create a basic HTML webpage with 2 links.
+1. Link should redirect to "www.interviewbit.com" on the same tab. Link text should be "Interview Bit"
+2. Link should redirect to "www.scaler.com" on the different tab. Link text should be "Scaler"
+-->
+
+<!-- Hints:
+Use Anchor tags (<a></a>) to create links.
+Set destination using the "href" attribute.
+To open link on the new tab use attribute "target='_blank'"
+-->
+
+<!-- Solution Approach:
+Start by creating the basic structure of the HTML document using the <html>, <head>, and <body> tags.
+Add 2 links using anchor tags and provided required text contents. Then use "href" attribute to indicate
+the link's destination. Further use "target" attribute to specify wehere to open the linked document.-->
+
+<!-- Test Cases:
+Verify that the webpage have 2 anchor tags.
+Verify that one anchor tag has the text "Interview Bit" and href attribute set to "www.interviewbit.com".
+Verify that one anchor tag has the text "Scaler", href attribute set to "www.scaler.com" and target attribute set to "_blank".
+If "https://" is not mentioned in code, include that also.
+-->
+
+<!-- Complete Solution -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+   <a href="https://www.interviewbit.com">Interview Bit</a> 
+   <a href="https://www.scaler.com" target="_blank">Scaler</a> 
+  </body>
+</html>
