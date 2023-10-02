@@ -1,0 +1,103 @@
+<!-- Problem Description:
+You are tasked with creating a responsive navigation menu that adapts to different screen sizes using CSS Media Queries. Below, you'll find the initial HTML structure and the CSS requirements to achieve this responsive design.
+1. Create a horizontal navigation menu (ul.menu) inside the nav.navbar.
+2. Use CSS Media Queries to make the navigation menu switch to a vertical layout (stacked) when the screen width is 768px or less.
+3. Ensure that the navigation menu items (li) are styled appropriately for both the horizontal and vertical layouts.
+
+Refer the below image to see what is the end state we want to reach. 
+-->
+
+<!-- Hints:
+1. Use the @media rule to define media queries.
+2. Consider changing the flex-direction property for the menu items to create the vertical layout.
+3. Adjust spacing, font size, or other styles as needed for responsiveness.
+-->
+
+<!-- Solution Approach:
+1. Define CSS Media Queries for screen widths above and below 768px.
+2. Use appropriate CSS properties to change the layout of the navigation menu between horizontal and vertical as per the screen width.
+-->
+
+<!-- Test Cases:
+1. Verify that the navigation menu is horizontal on screens with a width greater than 768px.
+   We can verify this by checking if "flex" property was applied on ".menu" and justify-content: space-around/space-evenly;
+2. The navigation menu is vertical (stacked) on screens with a width of 768px or less.
+   We can verify this by checking if media queries was css overwrite the menu class.
+   Properties to check in media query for ".menu" are: flex-direction: column; text-align: center;
+-->
+
+<!-- Initial HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Menu</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+
+
+<!-- Complete Solution -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navigation Menu</title>
+    <style>
+      /* Solution CSS */
+      /* Horizontal menu for screens wider than 768px */
+      .navbar {
+        background-color: #3498db;
+        padding: 10px 0;
+      }
+
+      .menu {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .menu li {
+        margin: 0;
+      }
+
+      .menu a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      /* Vertical (stacked) menu for screens 768px or less */
+      @media screen and (max-width: 768px) {
+        .menu {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

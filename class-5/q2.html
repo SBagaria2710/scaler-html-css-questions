@@ -1,0 +1,70 @@
+<!-- Problem Description:
+You are tasked with creating a simple layout using CSS Flexbox to arrange a set of elements in a row and write internal css following the following instructions:
+1. Create a div with class "container".
+2. Add 5 divs with the class "box" and put these 5 divs inside "container" div.
+3. Use CSS Flexbox to create a column-based layout for the elements within the ".container".
+4. Set the display property of the ".container" to create a flex container.
+5. Arrange the child elements with the class ".box" in a column.
+6. Ensure that the child elements have equal spacing between them.
+
+Refer the below image to see what is the end state we want to reach. 
+-->
+
+<!-- Hints:
+1. To create a flex container, use the display property with the value that makes child elements become flex items.
+2. Explore the flex-direction property to control the direction of the flex container.
+3. Use the appropriate property to ensure equal spacing between flex items.
+4. Review the properties related to flex container alignment.
+5. Experiment with different values for these properties to achieve the desired column-based layout.
+-->
+
+<!-- Solution Approach:
+1. Set the display property of the .container to create a flex container.
+2. Use the flex-direction property to specify a column-based layout.
+3. Ensure that the child elements with the class .box are evenly spaced within the flex container.
+-->
+
+<!-- Test Cases:
+1. Verify Inside body tag we have 1 "container" div and 5 "box" divs within.
+2. Verify the elements with the class ".box" are arranged in a column.
+3. Verify there is equal spacing between the elements.
+4. Verify the elements are numbered from 1 to 5.
+-->
+
+<!-- Complete Solution -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vertical Flexbox Layout</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .box {
+        width: 100px;
+        height: 50px;
+        background-color: #3498db;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+    </div>
+  </body>
+</html>

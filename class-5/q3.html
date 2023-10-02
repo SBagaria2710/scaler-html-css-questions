@@ -1,0 +1,67 @@
+<!-- Problem Description:
+You are tasked with creating a centered layout using CSS Flexbox to arrange a set of elements both vertically and horizontally centered within a container. 
+1. Create a div with class "container".
+2. Add 5 divs with the class "box" and put these 5 divs inside "container" div.
+3. Use CSS Flexbox to create a centered layout for the elements within the ".container".
+4. Set the display property of the ".container" to create a flex container.
+5. Center the child elements with the class ".box" both vertically and horizontally within the container.
+
+Refer the below image to see what is the end state we want to reach. 
+-->
+
+<!-- Hints:
+1. Use Flexbox properties to achieve both vertical and horizontal centering.
+2. Consider how to align items both horizontally and vertically within the container.
+-->
+
+<!-- Solution Approach:
+1. Set the display property of the ".container" to create a flex container.
+2. Utilize Flexbox properties such as "justify-content" and "align-items" to achieve both vertical and horizontal centering of the child elements.
+-->
+
+<!-- Test Cases:
+1. Verify Inside body tag we have 1 "container" div and 5 "box" divs within.
+2. Verify the elements with the class ".box" are arranged in a row.
+3. Verify the elements are centered on screen.
+4. Verify the elements are numbered from 1 to 5.
+-->
+
+<!-- Complete Solution -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Layout</title>
+    <style>
+      /* Solution CSS */
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: #3498db;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+    </div>
+  </body>
+</html>
