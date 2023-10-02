@@ -1,0 +1,51 @@
+<!-- Problem Description:
+You need to create a styled box element with specific dimensions and styles.
+Create a div element with add class "styled-box" on it. Write internal CSS and use class selector to target the div and follow the below intructions to style the div:
+1. Style the div element with the class styled-box to have a fixed width of 200px and a fixed height of 100px.
+2. Set a background color of your choice for the box.
+3. Add a 10px margin around all sides of the box.
+4. Apply a 5px padding inside the box.
+5. Add a border with a 2px width and a different color from the background.
+-->
+
+<!-- Hints:
+Create a simple div and add class ".styled-box"
+Write internal css by adding style tag directly in the head of html.
+Follow the CSS requirements to add styles
+-->
+
+<!-- Solution Approach:
+Create a simple div with add class "styled-box".
+Add <style> in the head of the HTML.
+Target the div with ".styled-box"
+Add width, height, padding, margin and border for .styled-box
+-->
+
+<!-- Test Cases:
+Verify div is created with class "styled-box"
+Verify internal CSS is used
+Verify the CSS properties are as mentioned in the question
+-->
+
+<!-- Complete Solution -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04Q02</title>
+    <style>
+        .styled-box {
+            width: 200px;
+            height: 100px;
+            background-color: yellow;
+            margin: 10px;
+            padding: 5px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="styled-box"></div>
+</body>
+</html>

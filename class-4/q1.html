@@ -1,0 +1,59 @@
+<!-- Problem Description:
+Create a simple navigation menu. Use semantic tags like ul, li.
+On ul, background-color to yellow, On li tag, apply space around the element's content by 20px, set font size as 20px and
+appropriate "display" property.
+
+Refer the below image to see what is the end state we want to reach. 
+-->
+
+<!-- Hints:
+Use <ul> tag and <li> tag to maintain a list.
+Make sure to set list-style-type proporty to none for <ul>.
+Add padding and font-size for li(s) to 20px.
+Align li(s) on the same line by setting "display" property appropriately.
+-->
+
+<!-- Solution Approach:
+Start by creating the basic structure of the HTML document using the <html>, <head>, and <body> tags.
+Add unordered list and mention a couple of li(s) as mentioned in the image.
+Start styling with padding and font-size as mentioned in the image.
+Add "list-style-type" property to "none" for ul tag and set background color to yellow.
+Align li(s) on the same line by setting "display" property to either block, inline or inline-block
+-->
+
+<!-- Test Cases:
+Verify ul and 4 li tags.
+Verify styling; padding=20px, font-size=20px, background-color=yellow, list-style-type=none, display=inline-block.
+Verify that the webpage has a proper structure using the <html>, <head>, and <body> tags.
+-->
+
+<!-- Complete Solution -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .nav {
+        background-color: yellow;
+        list-style-type: none;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav li {
+        display: inline-block;
+        font-size: 20px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="nav">
+      <li>Home</li>
+      <li>About Us</li>
+      <li>Our Clients</li>
+      <li>Contact Us</li>
+    </ul>
+  </body>
+</html>
