@@ -1,0 +1,104 @@
+<!-- Problem Description:
+You are tasked with creating a responsive image gallery that adjusts its layout based on
+different screen sizes using CSS Media Queries. Below, you'll find the initial HTML
+structure and the CSS requirements to achieve this responsive design. Find the CSS Requirements below:
+
+1. Create a responsive image gallery (div.image-gallery) that initially displays images in a row with two images per row.
+2. Use CSS Media Queries to adjust the image gallery layout based on the screen size:
+3. On screens with a width of 768px or more, display three images per row.
+4. On screens with a width of 480px or less, display one image per row.
+5. Ensure that the images have equal spacing and look visually appealing in all layouts.
+-->
+
+<!-- Hints:
+1. Define CSS Media Queries for screen widths above and below 768px and 480px.
+2. Use Flexbox properties to control the layout of the image gallery and adjust flex-basis accordingly.
+-->
+
+<!-- Solution Approach:
+To create a row-based layout using Flexbox, follow these steps:
+
+1. Set the display property of the .container to create a flex container.
+2. Use the flex-direction property to specify a row-based layout.
+3. Ensure that the child elements with the class .box are evenly spaced within the flex container.
+-->
+
+<!-- Test Cases:
+1. For more than 768px, 3 pictures should be in a row.
+2. For less than 768px and more than 480px, 2 pictures should be in a row.
+3. For less than 480px, 1 picture should be in a same row.
+-->
+
+<!-- Initial HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+</head>
+<body>
+    <div class="image-gallery">
+        <img src="https://picsum.photos/seed/picsum/200/300" alt="Image 1">
+        <img src="https://picsum.photos/seed/picsum/200/300" alt="Image 2">
+        <img src="https://picsum.photos/seed/picsum/200/300" alt="Image 3">
+        <img src="https://picsum.photos/seed/picsum/200/300" alt="Image 4">
+        <img src="https://picsum.photos/seed/picsum/200/300" alt="Image 5">
+        <img src="https://picsum.photos/seed/picsum/200/300" alt="Image 6">
+    </div>
+</body>
+</html>
+
+
+
+<!-- Complete Solution -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Image Gallery</title>
+    <style>
+      /* Solution CSS */
+      /* Image gallery with two images per row initially */
+      .image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .image-gallery img {
+        flex-basis: calc(50% - 10px); /* Two images per row with spacing */
+        margin: 5px;
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Media query for screens with a width of 768px or more */
+      @media screen and (min-width: 768px) {
+        .image-gallery img {
+          flex-basis: calc(
+            33.33% - 10px
+          ); /* Three images per row with spacing */
+        }
+      }
+
+      /* Media query for screens with a width of 480px or less */
+      @media screen and (max-width: 480px) {
+        .image-gallery img {
+          flex-basis: calc(100% - 10px); /* One image per row with spacing */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image-gallery">
+      <img src="https://picsum.photos/seed/picsum/200/300" alt="Image 1" />
+      <img src="https://picsum.photos/seed/picsum/200/300" alt="Image 2" />
+      <img src="https://picsum.photos/seed/picsum/200/300" alt="Image 3" />
+      <img src="https://picsum.photos/seed/picsum/200/300" alt="Image 4" />
+      <img src="https://picsum.photos/seed/picsum/200/300" alt="Image 5" />
+      <img src="https://picsum.photos/seed/picsum/200/300" alt="Image 6" />
+    </div>
+  </body>
+</html>
