@@ -1,0 +1,110 @@
+<!-- Problem Description:
+You are tasked with creating a responsive grid layout using CSS Grid to display
+a collection of items. Below, you'll find the initial HTML structure and the CSS
+requirements to achieve this responsive design. Following are the CSS Requirements:
+
+1. Create a responsive grid layout (div.grid) using CSS Grid that initially displays items in a 2x3 grid (two columns and three rows).
+2. Use CSS Grid properties to adjust the grid layout based on the screen size:
+3. On screens with a width of 768px or more, display items in a 3x2 grid (three columns and two rows).
+4. On screens with a width of 480px or less, display items in a single column.
+5. Ensure that the grid items have equal spacing of 10px and look visually appealing in all layouts.
+
+Just make changes within the <style> tag and not anywhere else.
+-->
+
+<!-- Hints:
+1. Utilize the @media rule to define media queries.
+2. Adjust the grid properties such as grid-template-columns to control the number of columns in the grid.
+-->
+
+<!-- Solution Approach:
+1. Define CSS Media Queries for screen widths above and below 768px and 480px.
+2. Use CSS Grid properties to control the layout of the grid and adjust the number of columns and rows accordingly.
+-->
+
+<!-- Test Cases:
+1. For more than 768px, 2x3 item grid should be there.
+2. For less than 768px and more than 480px, 3x2 item grid should be there.
+3. For less than 480px, 1x1 item grid should be there.
+-->
+
+<!-- Initial HTML -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Grid Layout</title>
+    <style>
+      .item {
+        background-color: #3498db;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+      <div class="item">Item 6</div>
+    </div>
+  </body>
+</html>
+
+<!-- Complete Solution -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Grid Layout</title>
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .item {
+        background-color: #3498db;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 18px;
+      }
+
+      /* Media query for screens with a width of 768px or more */
+      @media screen and (min-width: 768px) {
+        .grid {
+          grid-template-columns: repeat(
+            3,
+            1fr
+          ); /* Three columns and two rows */
+        }
+      }
+
+      /* Media query for screens with a width of 480px or less */
+      @media screen and (max-width: 480px) {
+        .grid {
+          grid-template-columns: 1fr; /* Single column */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+      <div class="item">Item 6</div>
+    </div>
+  </body>
+</html>
